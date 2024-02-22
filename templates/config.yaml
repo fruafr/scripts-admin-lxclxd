@@ -1,0 +1,18 @@
+config:
+  #Replace <IPV4> and <IPV6> by the IPv4 and IPv6 of the server. values should be separated by comma
+  core.proxy_ignore_hosts: 127.0.0.1,<IPV4>,<IPV6>,localhost
+networks: []
+storage_pools: []
+profiles:
+- config: {}
+  description: ""
+  devices: {}
+  name: default
+projects:
+- config:
+    features.images: "true"
+    features.networks: "true"
+    features.profiles: "true"
+    features.storage.volumes: "true"
+  description: Default LXD project
+  name: default
